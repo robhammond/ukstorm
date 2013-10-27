@@ -1,0 +1,25 @@
+README
+======
+
+About:
+
+Extract & process tweets mentioning the hashtag #ukstorm that are geotagged.
+The tweets.xml file contains ~164 tweets taken from the sample of >9,300 tweets
+with that hashtag for ~48hrs between 1500 on Friday 25 Oct and 1600 Sunday 27 Oct 2013.
+
+The JSON file contains all tweets collected for further processing or to save
+sending further API requests for that time period.
+
+Requirements:
+
+- Ensure you have Perl 5.10+ and MongoDB 2.2+ installed on your system
+- Run the following command to install the lightweight CPAN Minus module:
+	curl -L http://cpanmin.us | perl - App::cpanminus
+- Run the following to install dependencies:
+	cpanm MongoDB Net::Twitter Scalar::Util Date::Manip::Date Geo::Gpx Modern::Perl
+- Sign up for a Twitter API key and fill in where indicated in gather-tweets.pl
+
+Instructions:
+
+- Run "perl gather-tweets.pl" to fetch your tweets from twitter's API
+- Run "perl process-tweets.pl" to pull them out into a GPX file
