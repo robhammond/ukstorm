@@ -12,7 +12,8 @@ sending further API requests for that time period.
 
 Requirements:
 
-- Ensure you have Perl 5.10+ and MongoDB 2.2+ installed on your system
+- Ensure you have Perl 5.10+ and MongoDB 2.2 installed on your system (annoyingly the latest
+  version of MongoDB *won't* work)
 - Run the following command to install the lightweight CPAN Minus module:
 	curl -L http://cpanmin.us | perl - App::cpanminus
 - Run the following to install dependencies:
